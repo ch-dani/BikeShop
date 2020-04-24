@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title #{docTitle}
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+		link(rel="stylesheet", href="Assets/Styles/Index.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js") 
+        
+	body
+		div.container-fluid.top_bg
+			div.overlay
+				nav.navbar.navbar-expand-sm.navbar-dark.d-flex.justify-content-between
+					a.navbar-brand(href="#") dani
+					ul.navbar-nav
+						li.nav-item
+							a.nav-link(href="/" style="color:black") Home
+						li.nav-item
+							a.nav-link(href="/products") Products
+					
+
+						li.nav-item
+							p.nav-link
+								span
+									a(href='login') LOGIN
+								span
+									a(href='signup') SIGNUP/
+
+
+
+
+					
+						
+						li.nav-item
+							a(href="user-profile")
+								img(src="Assets/Images/log.PNG" height="35px" width="25px" style="margin-left:100px!important;padding-top:5px;")
+				div.row
+					div.col-lg-6
+						div.card.text-center
+							h5 Send Invitation to your friends br to get 20% commission of their buying
+							div(style="padding-top: 100px")
+							button.btn.btn-info.invite_btn
+								a(href="modules/isloggedIn.php") Invite Now
+					div.col-lg-6.top_bgcycle
+
+
+
+		section.latest_products
+		h4 Latest Products
+		//- Products code
+		div.container
+			div.row
+				div.col-lg-12
+					div.d-flex.flex-wrap
+						div.card.prod_img.p-2(style="display: inline-block!important")
+							img.card-img-top(src="../Assets/Images/slide3.3b069.png" alt="Card image")
+							div.card-body
+							h5 title
+							h6(style="float:right") $1,000
+							p.card-text description text will come here text will come here
+							div.d-flex.justify-content-between.p-2
+							a(href="modules/cart.php").btn.btn-danger Buy Now
+						div.card.prod_img.p-2(style="display: inline-block!important")
+							img.card-img-top(src="../Assets/Images/slide3.3b069.png" alt="Card image")
+							div.card-body
+							h5 title
+							h6(style="float:right") $1,000
+							p.card-text description text will come here text will come here
+							div.d-flex.justify-content-between.p-2
+							a(href="modules/cart.php").btn.btn-danger Buy Now
+						div.card.prod_img.p-2(style="display: inline-block!important")
+							img.card-img-top(src="../Assets/Images/slide3.3b069.png" alt="Card image")
+							div.card-body
+							h5 title
+							h6(style="float:right") $1,000
+							p.card-text description text will come here text will come here
+							div.d-flex.justify-content-between.p-2
+							a(href="modules/cart.php").btn.btn-danger Buy Now
+		section
+			div.hero
+				div.overlay_demo.text-center
+					h1 BEST BICYCLE
+					h2 COLLECTION
+					button.btn.btn-warning SHOP NOW
+
+		//- news letter
+		section.news
+			h4.text-center Join Us
+			div.newsletter
+				div.news_Content.text-center(style="width:500px;text-align:center!important;")
+					h5 Newsletter
+				p.text-center Subscribe our newsletter and get 30% discount
+				form.text-center
+					input(type="text" name="")
+					button.btn.btn-secondary Subscribe
+		//- quick access
+		div.quickAccess
+			h1.text-center Quick Access
+
+		//- footer
+		footer.ftr
+			div.row.option
+				div.col-lg-4
+					span Quick Access
+					ul
+						li About us
+						li Services
+						li Contact us
+						li FAQ's
+						li Product
+						
+				
+				div.col-lg-4
+					span Follow us
+					div.d-flex.justify-content-around.p-5
+						i.fa.fa-facebook(title="facebook")
+						i.fa.fa-twitter(title="twitter")
+						i.fa.fa-instagram(title="instagram")
+						i.fa.fa-youtube(title="youtube")
+					
+				div.col-lg-4
+					span join us
+					section.news
+						div.class
+							div.news_Content.text-center
+								form
+									input(type="text" name="")
+								button.btn.btn-secondary Subscribe
+							
+
+
+
