@@ -29,10 +29,11 @@ html
 					div.col-lg-6
 						div.card.text-center.p-5.login
 							h5 LOG IN
-							form
-								input(type='email' placeholder="Enter Email Id")
-								input(type='password' placeholder="Enter Password" required="true")
+							form(method="POST" action="/login" enctype='multipart/formdata')
+								input(type='email' placeholder="Enter Email Id" name="email")
+								input(type='password' placeholder="Enter Password" name="pwd" required="true")
 								button.btn.btn-info LOG IN
+									
 					div.col-lg-6.top_bgcycle
 		div.row
 			div(style="background:#EAE6E2;width:100%").p-3.d-flex.justify-content-between

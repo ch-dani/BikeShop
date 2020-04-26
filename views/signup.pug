@@ -29,13 +29,13 @@ html
 					div.col-lg-6
 						div.card.text-center.p-5.login
 							h5 SIGN UP
-							form
-								input(type='text' placeholder="Enter Your Name")
-								input(type='text' placeholder="Enter Address")
-								input(type='email' placeholder="Enter Email Id")
+							form(action='/Signup' method='POST' enctype='multipart/formdata')
+								input(type='text' placeholder="Enter Your Name" name='name')
+								input(type='text' placeholder="Enter Address" name='address')
+								input(type='email' placeholder="Enter Email Id" name='email')
 								
-								input(type='password' placeholder="Enter Password")
-								input(type='password' placeholder="Confirm Password" required="true")
+								input(type='password' placeholder="Enter Password" name='pwd')
+								input(type='password' placeholder="Confirm Password" name='cpwd' required="true")
 								button.btn.btn-info SIGN UP
 					div.col-lg-6.top_bgcycle
 		div.row

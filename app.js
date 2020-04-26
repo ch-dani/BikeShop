@@ -13,8 +13,9 @@ app.set('view engine','pug');
 app.set('views','./views');
 
  app.use(userRoutes);
- app.use('/',(req,res,next)=>{
-     res.send("page is not available");
+ app.get('/',(req,res,next)=>{
+     res.send("page is not availableK");
+     console.log('category:'+req.body['category']);
  })
  
  
