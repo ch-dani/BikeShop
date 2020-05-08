@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Document
+		meta(http-equiv="X-UA-Compatible" content="IE=edge") 
+		meta(name="description" content="") 
+		meta(name="robots" content="all,follow") 
+		
+		link(rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css")
+		
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous") 
+		
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800") 
+		
+		link(rel="stylesheet" href="css/orionicons.css") 
+		
+		link(rel="stylesheet" href="css/style.default.css" id="theme-stylesheet")
+		
+		link(rel="stylesheet" href="css/custom.css")
+		
+		link(rel="shortcut icon" href="img/favicon.png?3")
+		
+		script(src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js")
+		script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+
+		script(src="vendor/jquery/jquery.min.js")
+		script(src="vendor/popper.js/umd/popper.min.js")
+		script(src="vendor/bootstrap/js/bootstrap.min.js")
+		script(src="vendor/jquery.cookie/jquery.cookie.js")
+		script(src="vendor/chart.js/Chart.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js")
+		script(src="js/front.js")
+		script(src="vendor/ajax/myajax.js")
+		script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js")
+
+
+
+
+
+        
+	body
+		header.header
+			nav.navbar.navbar-expand-lg.px-4.py-2.bg-white.shadow
+				a(href="#").sidebar-toggler.text-gray-500.mr-4.mr-lg-5.lead
+					i.fas.fa-align-left
+					a(href="index.html").navbar-brand.font-weight-bold.text-uppercase.text-base Bubbly Dashboard
+					ul.ml-auto.d-flex.align-items-center.list-unstyled.mb-0
+						li.nav-item
+							form(id="searchForm").ml-auto.d-none.d-lg-block
+								div.form-group.position-relative.mb-0
+									button(type="submit" style="top: -3px; left: 0;").position-absolute.bg-white.border-0.p-0
+										i.o-search-magnify-1.text-gray.text-lg
+									input(type="search" placeholder="Search ...").form-control.form-control-sm.border-0.no-shadow.pl-4
+						li.nav-item.dropdown.mr-3
+							a(id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").nav-link.dropdown-toggle.text-gray-400.px-1
+								i.fa.fa-bell
+								span.notification-icon
+							div(aria-labelledby="notifications").dropdown-menu
+								a(href="#").dropdown-item
+									div.d-flex.align-items-center
+										div.icon.icon-sm.bg-violet.text-white
+											i.fab.fa-twitter
+										div.text.ml-2
+											p.mb-0 You have 2 followers
+								a(href="#").dropdown-item
+									div.d-flex.align-items-center
+										div.icon.icon-sm.bg-violet.text-white
+											i.fab.fa-envelope
+										div.text.ml-2
+											p.mb-0 You have 2 new messages
+								a(href="#").dropdown-item
+									div.d-flex.align-items-center
+										div.icon.icon-sm.bg-violet.text-white
+											i.fab.fa-upload
+										div.text.ml-2
+											p.mb-0 You have 2 followers                                            
+								
+
+
+
+						li.nav-item.dropdown.ml-auto
+							a(id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").nav-link.dropdown-toggle
+								img(src="img/avatar-6.jpg" alt="Jason Doe" style="max-width: 2.5rem;").img-fluid.rounded-circle.shadow
+							div(aria-labelledby="userInfo").dropdown-menu
+								a(href="#").dropdown-item
+									strong.d-block.text-uppercase.headings-font-family Mark Stephen
+									small Web Developer
+								div.dropdown-divider
+								a(href="#").dropdown-item Settings
+								a(href="#").dropdown-item Activity log
+								div.dropdown-divider
+								a(href="login.html").dropdown-item Logout
+		div.d-flex.align-items-stretch
+			div(sidebar).sidebar.py-3
+				div.text-gray-400.text-uppercase.px-3.px-lg-4.py-4.font-weight-bold.small.headings-font-family MAIN
+				ul.sidebar-menu.list-unstyled
+					li.sidebar-list-item
+					a(href="index.html").sidebar-link.text-muted
+						i.o-home-1.mr-3.text-gray
+						span Home
+					li.sidebar-list-item
+					a(href="/addproduct").sidebar-link.text-muted
+						i.o-sales-up-1.mr-3.text-gray
+						span(id='showCategory') Add Product
+					li.sidebar-list-item
+					a(href="charts.html").sidebar-link.text-muted
+						i.o-sales-up-1.mr-3.text-gray
+						span Charts
+					
+					li.sidebar-list-item
+						a(href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages").sidebar-link.text-muted
+							i.o-wireframe-1.mr-3.text-gray
+							span Pages
+						div(id="pages").collapse
+							ul.sidebar-menu.list-unstyled.border-left.border-primary.border-thick
+								li.sidebar-list-item
+									a(href="#").sidebar-link.text-muted.pl-lg-5 Page one
+									a(href="#").sidebar-link.text-muted.pl-lg-5 Page one
+
+			div.page-holder.w-100.d-flex.flex-wrap
+				div.container-fluid.px-xl-5
+					section.py-5
+						div(id="showCategory").row
+							h5 PUT YOUR CONTENT HERE

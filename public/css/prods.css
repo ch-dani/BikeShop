@@ -1,0 +1,17 @@
+/* add product styling */
+
+.ad_prod{
+    
+}
+.ad_prod form input,.ad_prod form textarea{
+    width: 100%;
+    margin-bottom:30px;
+    background-color: #F8F9FB;
+    border:none;
+    border-bottom:2px solid lightblue;
+    padding:5px;
+    outline:none;
+}
+.ad_prod form input[type=file]{
+    border:none;
+}
