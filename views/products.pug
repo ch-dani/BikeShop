@@ -13,18 +13,6 @@ html
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js") 
         
 	body
-		//- here loop practice
-		each pro in prod
-			ul
-				li=pro.desp
-				li=pro.title
-
-		h4 #{title}
-		ul
-			each val, key in {1: 'one', 2: 'two', 3: 'three'}
-				p ADNAN NAWAZ GUJJAR SAYING ITS GOOD + #{desp}
-				li= key + ': ' + val
-		span #{addre}
 		div.container-fluid.top_bg
 			div.overlay
 				nav.navbar.navbar-expand-sm.navbar-dark.d-flex.justify-content-between
@@ -69,55 +57,17 @@ html
 			div.row
 				div.col-lg-12
 					div.d-flex.flex-wrap
-						div.card.prod_img.p-2(style="display: inline-block!important")
-							
-							img.card-img-top(src =(addre) alt="Card image")
-							div.card-body
-							h5 title
-							h6(style="float:right") $1,000
-							p.card-text description text will come here text will come here
-							div.d-flex.justify-content-between.p-2
-							a(href="modules/cart.php").btn.btn-danger Buy Now
-						div.card.prod_img.p-2(style="display: inline-block!important")
-							img.card-img-top(src="../Assets/Images/slide3.3b069.png" alt="Card image")
-							div.card-body
-							h5 title
-							h6(style="float:right") $1,000
-							p.card-text description text will come here text will come here
-							div.d-flex.justify-content-between.p-2
-							a(href="modules/cart.php").btn.btn-danger Buy Now
-						div.card.prod_img.p-2(style="display: inline-block!important")
-							img.card-img-top(src="../Assets/Images/slide3.3b069.png" alt="Card image")
-							div.card-body
-							h5 title
-							h6(style="float:right") $1,000
-							p.card-text description text will come here text will come here
-							div.d-flex.justify-content-between.p-2
-							a(href="modules/cart.php").btn.btn-danger Buy Now
-						div.card.prod_img.p-2(style="display: inline-block!important")
-							img.card-img-top(src="../Assets/Images/slide3.3b069.png" alt="Card image")
-							div.card-body
-							h5 title
-							h6(style="float:right") $1,000
-							p.card-text description text will come here text will come here
-							div.d-flex.justify-content-between.p-2
-							a(href="modules/cart.php").btn.btn-danger Buy Now
-						div.card.prod_img.p-2(style="display: inline-block!important")
-							img.card-img-top(src="../Assets/Images/slide3.3b069.png" alt="Card image")
-							div.card-body
-							h5 title
-							h6(style="float:right") $1,000
-							p.card-text description text will come here text will come here
-							div.d-flex.justify-content-between.p-2
-							a(href="modules/cart.php").btn.btn-danger Buy Now
-						div.card.prod_img.p-2(style="display: inline-block!important")
-							img.card-img-top(src="../Assets/Images/slide3.3b069.png" alt="Card image")
-							div.card-body
-							h5 title
-							h6(style="float:right") $1,000
-							p.card-text description text will come here text will come here
-							div.d-flex.justify-content-between.p-2
-							a(href="modules/cart.php").btn.btn-danger Buy Now                            
+						each pro in prod
+							div.card.prod_img.p-2(style="display: inline-block!important")
+								//- img.card-img-top(src alt="Card image")
+								img(src='uploads/'+(pro.image)).card-img-top
+								div.card-body
+								h5 #{pro.title}
+								h6(style="float:right") $#{pro.price}
+								p.card-text #{pro.description}
+								div.d-flex.justify-content-between.p-2
+								a(href="modules/cart.php").btn.btn-danger Buy Now
+						                      
 		section
 			div.hero
 				div.overlay_demo.text-center

@@ -51,29 +51,15 @@ router.get('/',(req,res)=>{
     res.render("signup");
  })
 
- router.get('/products',(req,res)=>{
-    const prod=[
-      {
-         title:'productsA',
-         desp:'the best prducts2',
-         price:'454858',
-         addre:'../Assets/Images/slide3.3b069.png'
-      },
-      {
-         title:'productsA',
-         desp:'the best prducts3',
-         price:'454858',
-         addre:'../Assets/Images/slide3.3b069.png'
-      },
-      {
-         title:'productsA',
-         desp:'the best prducts4',
-         price:'454858',
-         addre:'../Assets/Images/slide3.3b069.png'
-      }
+ router.get('/products',async(req,res)=>{
 
-    ]
-   res.render("products",{prod:prod});
+   mongoose.connect('mongodb://localhost:27017/bikeshop',{useNewUrlParser:true,useUnifiedTopology:true});
+   const db=mongoose.connection;
+   
+   const products= await productmodel.find();
+   console.log(products);
+
+    res.render("products",{prod:products});
 
 })
 
@@ -85,6 +71,8 @@ router.get('/',(req,res)=>{
    res.render('addproduct');
    console.log(req.url);
 })
+
+
  router.get('/admin',(req,res)=>{
    res.render('admin');
 })
@@ -105,8 +93,8 @@ router.post('/addproduct',(req,res)=>{
    
       mongoose.connect('mongodb://localhost:27017/bikeshop',{useNewUrlParser:true,useUnifiedTopology:true});
       const db=mongoose.connection;
-      let products=new productmodel(obj);
-      
+      let products=new productmodel(obj);      
+
       products.save().then(()=>{
          console.log("recored saved successfully");
       }).catch(()=>{
@@ -116,7 +104,7 @@ router.post('/addproduct',(req,res)=>{
          
            console.log(obj);
            
-           res.send(req.file);
+           
            
         
      })
