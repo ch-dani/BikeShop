@@ -1,4 +1,5 @@
- const express=require("express");
+const jwt=require('jsonwebtoken');
+const express=require("express");
  const app=express();
  const bodyParser=require('body-parser');
  const path=require('path');
@@ -17,6 +18,13 @@ app.set('views','./views');
      res.send("page is not availableK");
      console.log('category:'+req.body['category']);
  })
+
+ async function generateToken(){
+    var token =await jwt.sign({ foo: 'bar' }, "privateKey");
+    console.log(token);
+ 
+ }
+ generateToken();
  
  
 

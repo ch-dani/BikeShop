@@ -1,5 +1,5 @@
 
-
+// const jwt=require('jsonwebtoken');
 const express=require('express');
 const app=express();
 const bodyParser=require('body-parser');
@@ -33,14 +33,24 @@ const upload=multer({
 // mongoose.connect('mongodb://localhost:27017/dbName',{useNewUrlParser:true,useUnifiedTopology:true});
 
 
-router.get('/',(req,res)=>{
-    res.render("index");
+router.get('/',async (req,res)=>{
+   mongoose.connect('mongodb://localhost:27017/bikeshop',{useNewUrlParser:true,useUnifiedTopology:true});
+   const db=mongoose.connection;
+   
+   let products= await productmodel.find().limit(3);
+   
+   console.log(products);
+
+   //  res.render("products",{prod:products});
+    res.render("index",{prod:products});
     
  })
 
 
  router.get('/login',(req,res)=>{
+
     res.render("login");
+
  })
 
 
