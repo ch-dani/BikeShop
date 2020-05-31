@@ -1,30 +1,33 @@
 const jwt=require('jsonwebtoken');
 const express=require("express");
- const app=express();
- const bodyParser=require('body-parser');
- const path=require('path');
- const userRoutes=require('./routes/user');
-//  use body-parser
- app.use(bodyParser.urlencoded({extended: false}));
-//  use public folder for static data using like images/styilng 
+const app=express();
+const bodyParser=require('body-parser');
+const path=require('path');
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
-// set view templating engines
 app.set('view engine','pug');
-
 app.set('views','./views');
+const adminRoutes=require('./routes/adminRoute');
+const bikeshopRoutes=require('./routes/bikeshopRoutes');
+const userRoutes=require('./routes/userRoutes');
 
- app.use(userRoutes);
- app.get('/',(req,res,next)=>{
+app.use('/bikeshop', bikeshopRoutes);
+app.use('/bikeshop/admin',adminRoutes);
+app.use('/bikeshop/user/',userRoutes);
+
+app.get('/',(req,res,next)=>{
+
      res.send("page is not availableK");
-     console.log('category:'+req.body['category']);
+    
+    
  })
 
- async function generateToken(){
-    var token =await jwt.sign({ foo: 'bar' }, "privateKey");
-    console.log(token);
+//  async function generateToken(){
+//     var token =await jwt.sign({ foo: 'bar' }, "privateKey");
+//     console.log(token);
  
- }
- generateToken();
+//  }
+//  generateToken();
  
  
 

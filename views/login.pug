@@ -8,7 +8,7 @@ html
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		title #{docTitle}
 		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
-		link(rel="stylesheet", href="Assets/Styles/Index.css")
+		link(rel="stylesheet", href="../../Assets/Styles/Index.css")
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js") 
         
@@ -19,19 +19,21 @@ html
 					a.navbar-brand(href="#") dani
 					ul.navbar-nav
 						li.nav-item
-							a.nav-link(href="/" style="color:black") Home
+							a.nav-link(href="/bikeshop/" style="color:black") Home
 						li.nav-item
-							a.nav-link(href="products") Products
+							a.nav-link(href="/bikeshop/products") Products
 						li.nav-item
-							a(href="isloggedIn.php")
-								img(src="Assets/Images/log.PNG" height="35px" width="25px" style="margin-left:100px!important;padding-top:5px;")
+							a(href="/bikeshop/user")
+								img(src="../../Assets/Images/log.PNG" height="35px" width="25px" style="margin-left:100px!important;padding-top:5px;")
 				div.row
 					div.col-lg-6
+						if(msg)
+							h3 #{msg}
 						div.card.text-center.p-5.login
 							h5 LOG IN
-							form(method="POST" action="/login" enctype='multipart/formdata')
+							form(method="POST" action="login" enctype='multipart/formdata')
 								input(type='email' placeholder="Enter Email Id" name="email")
-								input(type='password' placeholder="Enter Password" name="pwd" required="true")
+								input(type='password' placeholder="Enter Password" name="pwd")
 								button.btn.btn-info LOG IN
 							h6(style="background:lightblue;margin-top:40px!important;color:red;padding:10px;display:none") Email or password is incorrect
 										
