@@ -52,7 +52,7 @@ exports.signupData=function(req,res){
     });
     
 }
-
+ 
 
 exports.loginData=function(req,res){
     mongoose.connect('mongodb://localhost:27017/bikeshop',{useNewUrlParser:true,useUnifiedTopology:true});
