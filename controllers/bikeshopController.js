@@ -59,6 +59,10 @@ exports.admin=function(req,res){
     res.end("Hello Admin !!");
     // res.render('admin');
 }
+exports.logout=function(req,res){
+    localStorage.clear('token');
+    res.redirect("/bikeshop/user/login");
+}
 
 
 

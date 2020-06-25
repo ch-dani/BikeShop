@@ -17,7 +17,8 @@ if(typeof localStorage==='undefined' || localStorage === null){
 
 
 exports.user_profile=function(req,res){
-    res.send("user_profile page is here");
+    res.render("user_profile.pug");
+    
 }
 
 exports.login=function(req,res){

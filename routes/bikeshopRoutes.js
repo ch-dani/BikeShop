@@ -29,6 +29,7 @@ const upload=multer({
 
 router.get('/',bikeshopController.home);
 router.get('/products',bikeshopController.products);
+router.get('/logout',bikeshopController.logout);
 
 
 router.get('/addproduct',bikeshopController.addproduct);
